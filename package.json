@@ -1,0 +1,38 @@
+{
+  "name": "linebot_env",
+  "version": "linebot_env",
+  "description": "general line bot with nodejs service setting",
+  "main": "index.js",
+  "author": "rickchang",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.2",
+    "axios": "^0.19.0",
+    "cron": "^1.7.1",
+    "dotenv": "^7.0.0",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.11",
+    "module-alias": "^2.2.0",
+    "nodemon": "^1.19.4",
+    "pg": "^7.9.0",
+    "sequelize": "^5.2.9"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@config": "./config",
+    "@route": "./route",
+    "@client" : "./client",
+    "@controller": "./controller"
+  }
+}
