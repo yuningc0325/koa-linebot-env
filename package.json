@@ -33,6 +33,9 @@
     "@config": "./config",
     "@route": "./route",
     "@client" : "./client",
-    "@controller": "./controller"
+    "@controller": "./controller",
+    "@runner" : "./runner",
+    "@api": "./api",
+    "@database": "./database"
   }
 }
