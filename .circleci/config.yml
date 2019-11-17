@@ -1,0 +1,7 @@
+# yml initial config 
+machine:
+  node:
+    version: 10.16.3
+test:
+  - yarn test
+
