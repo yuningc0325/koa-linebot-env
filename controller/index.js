@@ -2,6 +2,7 @@ const client = require('@client/index.js')
 const HTTPError = require('@line/bot-sdk').HTTPError
 const api = require('@api/index.js')
 const db = require('@database/index.js')
+const reply = require('./reply')
 const controller = {}
 
 controller.reply = async (event) => {
@@ -30,7 +31,7 @@ controller.reply = async (event) => {
       case 'text' :
         client.replyMessage(replyToken, {
           type: 'text',
-          text: textReply(message)
+          text: reply.textReply(message)
         }).catch(err => {
           if (err instanceof HTTPError) {
             console.log(err)
@@ -47,13 +48,6 @@ controller.reply = async (event) => {
         // do something
         break
     }
-  }
-}
-
-const textReply = (req = '') => {
-  if (typeof req !== 'string') throw new Error('Data format error')
-  if (req) {
-    return 'test'
   }
 }
 

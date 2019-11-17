@@ -7,11 +7,13 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "jest ./test/index.test.js --coverage"
   },
   "dependencies": {
     "@line/bot-sdk": "^6.8.2",
     "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
     "cron": "^1.7.1",
     "dotenv": "^7.0.0",
     "koa": "^2.7.0",
@@ -26,15 +28,16 @@
     "sequelize": "^5.2.9"
   },
   "devDependencies": {
+    "jest": "^24.9.0",
     "standard": "^14.3.1"
   },
   "_moduleAliases": {
     "@root": ".",
     "@config": "./config",
     "@route": "./route",
-    "@client" : "./client",
+    "@client": "./client",
     "@controller": "./controller",
-    "@runner" : "./runner",
+    "@runner": "./runner",
     "@api": "./api",
     "@database": "./database"
   }
